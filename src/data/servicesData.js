@@ -121,7 +121,7 @@ export const contactData = {
       },
       whatsapp: {
         label: 'WhatsApp',
-        placeholder: '(93) 99135-9644',
+        placeholder: '(93) 99322-2232',
       },
       service: {
         label: 'Serviço de Interesse',
