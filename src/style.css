@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-quantum-bg: #07111e;
+  --color-quantum-card: #0d1d2f;
+  --color-quantum-primary: #1e70bf;
+  --color-quantum-accent: #2983db;
+  --color-quantum-light: #f8fafc;
+  --color-quantum-dark: #07111e;
+}
+
+body {
+  background-color: var(--color-quantum-bg);
+  color: var(--color-quantum-light);
+}
+
+.border-quantum-card {
+  border-color: #1a3452;
+}
+
+.quantum-card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.quantum-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(30, 112, 191, 0.15);
+}
