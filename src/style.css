@@ -1,52 +1,38 @@
+@import '@fontsource-variable/schibsted-grotesk';
 @import 'tailwindcss';
 
 @theme {
-  --color-quantum-bg: #07111e;
-  --color-quantum-card: #0d1d2f;
-  --color-quantum-primary: #1e70bf;
-  --color-quantum-accent: #2983db;
-  --color-quantum-light: #f8fafc;
-  --color-quantum-dark: #07111e;
+  --font-sans: 'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* Paleta da marca: azul-marinho com um único azul de destaque */
+  --color-ink: #07111e;
+  --color-ink-2: #0c1a2b;
+  --color-line: #1c3350;
+  --color-brand: #2a7fd4;
+  --color-brand-dark: #1e70bf;
+  --color-paper: #f3f1ec;
+  --color-muted: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background-color: var(--color-quantum-bg);
-  color: var(--color-quantum-light);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
-.border-quantum-card {
-  border-color: #1a3452;
+::selection {
+  background: var(--color-brand);
+  color: white;
 }
 
-.quantum-card-hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.quantum-card-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px -10px rgba(30, 112, 191, 0.15);
-}
-
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
-}
-
-.animate-ping {
-  animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-.animate-pulse {
-  animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
